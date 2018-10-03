@@ -1,0 +1,100 @@
+<!DOCTYPE>
+<html>
+    <head>
+            <title> Tables</title>
+            <meta charset="utf-8">  
+            <link 
+            rel="stylesheet"  
+            type="" 
+            href="">
+    </head>
+        <body>
+ <!--в атрибуте action  мы указываем куда отправляем данные, на какой сервер -->
+ <!--есть два метода get и post, если не указываем, то по умолчанию get.  -->
+            <form action="http://www.primer.ru/subscribe.php" method="get">
+                <p>Здесь отображены элементы формы</p>
+            </form>
+
+            <form action="http://www.primer.ru/subscribe.php" method="get">
+                <p>Имя пользователя</p>
+                <input type="text" name="username" size="15" maxlength="30" />
+                <p>Password
+                <input type="password" name="password" size="15>" </p> <br>
+                <p>What do you think about this?</p>
+           <textarea name="comments" cols="20" rows="4"> Введите свой коммент</textarea> </p>
+ <!--Радиобаттон  --><hr>
+                 <form action="http://www.primer.ru/subscribe.php">
+               <p> Please, choose the music bar:</p><br />
+               <input type="radio" name"janr" value="rock"  />Рок
+               <input type="radio" name"janr" value="pop" checked="checked" />Поп
+               <input type="radio" name"janr" value="techno" />Электроника
+               <p>
+               </form>
+            </form>
+<!--Чекбокс  --><hr>
+           <p>Please answer where do you listen music
+               <input type="checkbox" name="service"  value="house" checked="checked" /> Doma
+               <input type="checkbox" name="service"  value="work"/> Work
+               <input type="checkbox" name="service"  value="wayhome"/> Wayhome
+           </p>
+<!--Выпадающий список  --><hr>
+<p>Please answer where do you listen music
+    <select name="ustroistva">
+        <option value="ipod">iPod</option>
+        <option value="ipod">Radio</option>
+        <option value="ipod">PC</option>
+        </select>
+
+        <!--Далее мы имеем дело с загрузкой файлов поэтому мы используем не get, а  post метод  --><hr>
+        <form action="http://www.primer.ru/zaggruzka.php" method="post"></form><!-- Как только сюда на сервер попадает файл, начинает отрабатывать скрипт  -->
+   <p>Выгрузите свою песню в формате мр3</p>
+   <input type="file" name="pesnya" /><br>
+   <input type="submit" value="Загрузить" />
+    </form>
+ <!--форма подписаться--><hr>
+ <p>Подпишитесь на рассылку наших новостей</p>
+ <input type="text" name="email" /><br>
+ <input type="submit" name="podpisatsya" value="podpisatsya" />
+<!--форма подписаться с картинкой--><hr>
+<p>Подпишитесь на рассылку наших новостей</p>
+ <input type="text" name="email" /><br>
+ <input type="image"vsrc="images/subscribe.jpg" width="100" height="20"/>
+<!--кнопка с картинкой--><hr>
+<button><img src="images/add.gif" alt="добавить" width="10" height="10"/>Добавить</button>
+
+<input type="hidden" name="zakladka" value="tekst_pesni" />
+<!--Тэг label  позволяет корректным образом именовать формы, грамотней чем использовать <p>  --><hr>
+<label>Возраст: <input type="text" name="vozrast" /></label>
+
+<hr>
+
+Пол:
+<input id="female" type="radio" name="pol" value="f">
+<label for="female">Женский</label>
+<input id="female" type="radio" name="pol" value="m">
+<label for="female">Мужской</label>
+
+<!--Тэг форма для заполнения --><hr>
+<fieldset>
+    <legend>Contact details</legend>   <!--То, что пишется над группой полей -->
+    <label>Email: <br /><input type="text" name="email"/></label> <br>
+    <label>mobile: <br /><input type="text" name="mobile"/></label> <br>
+    <label>phone: <br /><input type="text" name="telephone"/></label> <br>
+</fieldset>
+
+<!--Механизм валидации формы --><hr>
+<label for="depart">Data vileta</label>
+<input type="date" name="defart">
+<input type="submit" value="Otpravit'">
+
+<!--Механизм валидации формы, будет ждать именно эмейл --><hr>
+<p>Пожалуйстта, введите значение эл почты</p>
+<input type="email name="email" />
+<input type="submit" value="Отправить">
+
+  </form>
+        </body>
+
+</html>
+
+   
